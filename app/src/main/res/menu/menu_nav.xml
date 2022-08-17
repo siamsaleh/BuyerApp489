@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/search_menu" android:title="Search" />
+    <item android:id="@+id/language_menu" android:title="Language" />
+    <item android:id="@+id/setting_menu" android:title="Setting" />
+    <item android:id="@+id/condition_menu" android:title="Terms And Condition" />
+    <item android:id="@+id/rate_menu" android:title="Rate This App" />
+    <item android:id="@+id/contact_menu" android:title="Contact Us" />
+
+
+</menu>

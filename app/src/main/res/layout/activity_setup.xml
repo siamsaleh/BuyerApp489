@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.SetupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/txtAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="Add Store Logo Or Image"
+            android:textColorHint="@color/text_black"
+            android:textSize="25sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textAlignment="center"
+
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/img_upload"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/txtAdd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+        <!--            android:id="@+id/edit_profile"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/ic_baseline_edit_24"-->
+        <!--            android:background="@drawable/ellipse_bag_logo"-->
+        <!--            android:backgroundTint="@color/text_black_gray"-->
+        <!--            android:padding="8dp"-->
+        <!--            android:layout_margin="10dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/profile_image"-->
+        <!--            app:layout_constraintRight_toRightOf="@id/profile_image"-->
+        <!--            />-->
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_custom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@drawable/baseline_store_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="15dp"
+            android:layout_marginTop="50dp"
+            android:hint="Store Name"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-light"
+
+            app:layout_constraintTop_toBottomOf="@+id/profile_image"
+            />
+
+        <TextView
+            android:id="@+id/per_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Personal Info"
+            android:textColor="@color/text_black_bold"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_custom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="15dp"
+            android:layout_marginTop="10dp"
+            android:hint="Owner Name"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-light"
+
+            app:layout_constraintTop_toBottomOf="@+id/profile_image"
+            />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_custom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="15dp"
+            android:layout_marginTop="10dp"
+            android:hint="Email"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-light"
+
+            app:layout_constraintTop_toBottomOf="@+id/etName"
+            />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_custom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@drawable/baseline_local_phone_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="15dp"
+            android:layout_marginTop="10dp"
+            android:hint="Phone"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-light"
+            android:inputType="phone"
+
+            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            />
+
+
+
+        <TextView
+            android:id="@+id/del_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Store Address"
+            android:textColor="@color/text_black_bold"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/del_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="1dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/del_text">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/edit_text_custom"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="start"
+                    android:hint="Address"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColorHint="@color/gray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/etAddressCity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_custom"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="start"
+                        android:hint="City"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColorHint="@color/gray"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/etAddressState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_custom"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="start"
+                        android:hint="State"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColorHint="@color/gray"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etPostalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/edit_text_custom"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="start"
+                    android:hint="Postal Code"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColorHint="@color/gray"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/genderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_custom"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="8dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/etPhone">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spDivision"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:spinnerMode="dropdown"
+                android:entries="@array/division_array"
+                tools:ignore="RtlSymmetry" />
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/genderLayout"
+            >
+
+            <Button
+                android:id="@+id/btSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edit_text_custom"
+                android:backgroundTint="@color/color_red"
+                android:textColor="@color/color_white"
+                android:text="Submit"
+                android:layout_marginTop="30dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/txtTerms"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                />
+
+        </FrameLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/frame"
+            />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

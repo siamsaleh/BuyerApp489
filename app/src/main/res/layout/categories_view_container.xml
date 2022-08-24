@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    app:cardMaxElevation="5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    android:background="@color/background_white"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/background_white"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/icon_view"
+            android:src="@drawable/ic_launcher_background"
+            android:padding="2dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_cat"
+            android:text="Medicine"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"
+            />
+
+    </LinearLayout>
+
+
+<!--    Glide.with(this).load(url).into(new SimpleTarget<Drawable>() {-->
+<!--    @SuppressLint("ObsoleteSdkInt")-->
+<!--    @Override-->
+<!--    public void onResourceReady(@NotNull Drawable resource, Transition<? super Drawable> transition) {-->
+<!--    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {-->
+<!--    loginLayout.setBackground(resource);-->
+<!--    }-->
+<!--    }-->
+<!--    });-->
+
+</androidx.cardview.widget.CardView>

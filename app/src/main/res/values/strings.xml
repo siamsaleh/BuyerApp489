@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">BuyerApp489</string>
+    <string name="taka_string">৳</string>
+
+    <string name="by_continuing_i_confirm_that_i_have_read_and_agree_to_the_terms_and_conditions_and_privacy_policy">By continuing, I confirm that I have read and agree to the Terms and conditions and Privacy Policy</string>
+
+    <string-array name="division_array">
+        <item>Select Division</item>
+        <item>Dhaka</item>
+        <item>Chittagong</item>
+        <item>Rajshahi</item>
+        <item>Khulna</item>
+        <item>Barisal</item>
+        <item>Sylhet</item>
+        <item>Rangpur</item>
+        <item>Mymensingh</item>
+    </string-array>
+
+    <string-array name="location_array">
+        <item>Select Division</item>
+        <item>Uttora</item>
+        <item>Mirpur</item>
+        <item>Gulshan</item>
+    </string-array>
 </resources>

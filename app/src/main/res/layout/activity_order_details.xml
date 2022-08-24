@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.OrderDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+
+        android:background="@color/color_red"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_red"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Order details"
+                android:textAlignment="center"
+                android:textColor="@color/background_white"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/order_id_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+
+        app:cardElevation="2dp"
+        app:cardMaxElevation="3dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/order_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order ID"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/text_black_gray"
+                android:textSize="15sp"
+                android:layout_alignParentStart="true"
+                tools:ignore="SmallSp"
+                />
+
+            <TextView
+                android:id="@+id/order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_txt"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="564156356351521dfs"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_txt"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppins_regular"
+                android:text="3 Aug, 2021"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/total_amount_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_id_layout"
+        android:layout_marginTop="1dp"
+
+        app:cardElevation="2dp"
+        app:cardMaxElevation="3dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/total_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Total Amount : "
+                android:textAlignment="center"
+                android:textColor="@color/text_black_gray"
+                android:textSize="15sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/total_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taka_string"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_toEndOf="@+id/total_txt"
+                tools:ignore="SmallSp"
+                />
+
+            <TextView
+                android:id="@+id/price_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taka_string"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_below="@+id/total_txt"
+                tools:ignore="SmallSp"
+                />
+
+            <TextView
+                android:id="@+id/qty_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qty:40"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_below="@+id/total_txt"
+                android:layout_alignParentEnd="true"
+                tools:ignore="SmallSp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/payment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total_amount_layout"
+        android:layout_marginTop="1dp"
+
+        app:cardElevation="2dp"
+        app:cardMaxElevation="3dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/payment_method_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Method"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/text_black_gray"
+                android:textSize="15sp"
+                android:layout_alignParentStart="true"
+                tools:ignore="SmallSp"
+                />
+
+            <TextView
+                android:id="@+id/payment_method_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/payment_method_txt"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Cash on delivery"
+                android:textAlignment="center"
+                android:textColor="#212121"
+                android:textSize="15sp"
+                tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cancel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payment_layout"
+        android:layout_marginTop="1dp"
+
+        app:cardElevation="2dp"
+        app:cardMaxElevation="3dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/cancel_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel Order"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="#212121"
+                android:textSize="15sp"
+                android:layout_alignParentStart="true"
+                tools:ignore="SmallSp"
+                />
+
+            <TextView
+                android:id="@+id/cancel_des"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cancel_txt"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="If you want to cancel this order, you can cancel it."
+                android:textAlignment="textStart"
+                android:textColor="#212121"
+                android:textSize="12dp"
+                tools:ignore="SmallSp"
+                />
+
+            <Button
+                android:id="@+id/btCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_custom"
+                android:backgroundTint="@color/black_effective"
+                android:text="Cancel Order"
+                android:textColor="@color/color_white"
+
+                android:layout_alignParentEnd="true"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btPackaging"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cancel_layout"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edit_text_custom"
+        android:backgroundTint="@color/text_black_gray"
+        android:text="Product Packed"
+
+        android:textColor="@color/color_white" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btShipped"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cancel_layout"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edit_text_custom"
+        android:backgroundTint="@color/text_black_gray"
+        android:text="Product Shipped"
+
+        android:textColor="@color/color_white" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btDelivered"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cancel_layout"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edit_text_custom"
+        android:backgroundTint="@color/text_black_gray"
+        android:text="Product Delivered"
+
+        android:textColor="@color/color_white" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btComplete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cancel_layout"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edit_text_custom"
+        android:backgroundTint="@color/text_black_gray"
+        android:text="I get my product"
+        android:textAllCaps="false"
+
+        android:textColor="@color/color_white" />
+
+</RelativeLayout>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.RegisterActivity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="280dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_alibaba"
+            android:textAlignment="center"
+            android:scaleType="centerInside"
+            android:layout_marginTop="60dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/txtLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="Buyer"
+            android:textColor="@color/color_red"
+            android:fontFamily="sans-serif-light"
+
+            app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+            app:layout_constraintStart_toStartOf="@+id/imgLogo"
+            />
+
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-light"
+            android:textSize="25sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/etEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_custom"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="15dp"
+            android:layout_marginTop="100dp"
+            android:hint="Email"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-light"
+
+            app:layout_constraintTop_toBottomOf="@+id/txtLogo"
+            />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_text_custom"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="Password"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-light"
+
+            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            />
+
+        <CheckBox
+            android:id="@+id/showPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Password"
+            android:textColor="@drawable/checkbox_colors"
+            android:buttonTint="@drawable/checkbox_colors"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+
+            app:layout_constraintTop_toBottomOf="@id/etPassword"
+            />
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/etConfirmPassword"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:background="@drawable/edit_text_custom"-->
+        <!--            android:layout_marginEnd="30dp"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:drawableStart="@drawable/ic_baseline_lock_24"-->
+        <!--            android:drawablePadding="10dp"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:layout_marginTop="15dp"-->
+        <!--            android:hint="Confirm Password"-->
+        <!--            android:textColorHint="@color/gray"-->
+        <!--            android:textSize="15sp"-->
+        <!--            android:fontFamily="sans-serif-light"-->
+
+        <!--            app:layout_constraintTop_toBottomOf="@+id/etPassword"-->
+        <!--            />-->
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtTerms"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="60dp"-->
+        <!--            android:layout_marginEnd="60dp"-->
+        <!--            android:layout_marginTop="30dp"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:text="No account?"-->
+        <!--            android:textColor="@color/gray"-->
+        <!--            android:fontFamily="sans-serif-light"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/etPassword"-->
+        <!--            />-->
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/showPassword"
+            >
+
+            <Button
+                android:id="@+id/btLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edit_text_custom"
+                android:backgroundTint="@color/color_red"
+                android:textColor="@color/color_white"
+                android:text="Log in"
+                android:layout_marginTop="30dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/txtTerms"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/txtNoAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:text="Already have a account"
+            android:textColor="@color/gray"
+            android:fontFamily="sans-serif-light"
+
+            app:layout_constraintTop_toBottomOf="@+id/frame"
+            app:layout_constraintEnd_toEndOf="@+id/frame"
+            />
+
+        <TextView
+            android:id="@+id/txtForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:text="Forget Password"
+            android:textColor="@color/gray"
+            android:fontFamily="sans-serif-light"
+
+            app:layout_constraintTop_toBottomOf="@+id/frame"
+            app:layout_constraintStart_toStartOf="@+id/frame"
+            />
+
+        <!--        <Button-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:layout_marginEnd="30dp"-->
+        <!--            android:background="@drawable/edit_text_custom"-->
+        <!--            android:backgroundTint="@color/color_red"-->
+        <!--            android:textColor="@color/color_white"-->
+        <!--            android:text="Continue"-->
+        <!--            android:layout_marginTop="30dp"-->
+
+        <!--            app:layout_constraintTop_toBottomOf="@+id/txtTerms"-->
+        <!--            />-->
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtOr"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:text="-  or  -"-->
+        <!--            android:textColor="@color/text_black_gray"-->
+        <!--            android:fontFamily="sans-serif-light"-->
+
+        <!--            app:layout_constraintTop_toBottomOf="@+id/txtForgetPassword"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            />-->
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/status"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:layout_marginEnd="30dp"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:background="@drawable/edit_custom_login"-->
+
+        <!--            app:layout_constraintTop_toBottomOf="@+id/txtOr"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            >-->
+
+        <!--            <de.hdodenhof.circleimageview.CircleImageView-->
+        <!--                android:layout_width="30dp"-->
+        <!--                android:layout_height="30dp"-->
+        <!--                android:src="@drawable/img_facebook"-->
+        <!--                android:layout_marginStart="30dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/status_level"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Continue with Facebook"-->
+        <!--                android:textColor="@color/text_black_gray"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_marginStart="35dp"-->
+        <!--                />-->
+
+        <!--        </LinearLayout>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/status2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:layout_marginEnd="30dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:background="@drawable/edit_custom_login"-->
+
+        <!--            app:layout_constraintTop_toBottomOf="@+id/status"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            >-->
+
+        <!--            <de.hdodenhof.circleimageview.CircleImageView-->
+        <!--                android:layout_width="30dp"-->
+        <!--                android:layout_height="30dp"-->
+        <!--                android:src="@drawable/img_google"-->
+        <!--                android:layout_marginStart="30dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/status_level2"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Continue with Google"-->
+        <!--                android:textColor="@color/text_black_gray"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_marginStart="35dp"-->
+        <!--                />-->
+
+        <!--        </LinearLayout>-->
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/txtForgetPassword"
+            />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

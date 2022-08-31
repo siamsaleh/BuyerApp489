@@ -20,13 +20,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginActivity extends AppCompatActivity {
+public class RegisterActivity2 extends AppCompatActivity {
 
     //Initialize Variables
     private EditText etEmail, etPassword;
     private ProgressBar progressBar;
-    private TextView txtNoAccount, txtForgetPassword;
-    private Button btLogin;
+    private TextView txtHaveAccount, txtForgetPassword;
+    private Button btRegister;
     private CheckBox showPassword;
 
     //Initialize Firebase
@@ -35,15 +35,15 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register2);
 
         //Initialize Variables
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         progressBar = findViewById(R.id.progressbar);
-        txtNoAccount = findViewById(R.id.txtNoAccount);
+        txtHaveAccount = findViewById(R.id.txtNoAccount);
         txtForgetPassword = findViewById(R.id.txtForgetPassword);
-        btLogin = findViewById(R.id.btLogin);
+        btRegister = findViewById(R.id.btLogin);
         showPassword = findViewById(R.id.showPassword);
 
         //Visible Invisible Password
@@ -62,15 +62,15 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         //For going register activity
-        txtNoAccount.setOnClickListener(new View.OnClickListener() {
+        txtHaveAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), RegisterActivity2.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
 
-        //Login button
-        btLogin.setOnClickListener(new View.OnClickListener() {
+
+        btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = etEmail.getText().toString().trim();
@@ -78,30 +78,28 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Not fill all editText
                 if (TextUtils.isEmpty(email) || TextUtils.isEmpty(pass)){
-                    Toast.makeText(LoginActivity.this, "Input Email Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity2.this, "Input Email Password", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     //Progressbar
                     progressBar.setVisibility(View.VISIBLE);
-                    btLogin.setVisibility(View.GONE);
+                    btRegister.setVisibility(View.GONE);
 
-                    mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                //Login Successful
+                                //Registration Successful
                                 startActivity(new Intent(getApplicationContext(), HomeActivity.class)
                                         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                                 finish();
-                                Toast.makeText(LoginActivity.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.GONE);
-                                btLogin.setVisibility(View.VISIBLE);
+                                Toast.makeText(RegisterActivity2.this, "Registration In Successfully Done", Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.GONE);
-                                btLogin.setVisibility(View.VISIBLE);
+                                Toast.makeText(RegisterActivity2.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
+                            progressBar.setVisibility(View.GONE);
+                            btRegister.setVisibility(View.VISIBLE);
                         }
                     });
 

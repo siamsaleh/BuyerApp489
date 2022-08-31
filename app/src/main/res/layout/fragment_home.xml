@@ -107,7 +107,7 @@
                     app:layout_constraintTop_toBottomOf="@id/spDist"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    android:visibility="invisible"
+                    android:visibility="gone"
                     >
 
 <!--                    <com.denzcoskun.imageslider.ImageSlider-->
